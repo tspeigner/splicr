@@ -1,9 +1,12 @@
+
+class splicr_web::windows {
+
 $app_pool = splicr_pool
 $app1 = splicr1
 $app2 = splicr2
 
-class splicr_web::windows {
   include iis
+
   iis::manage_site {'$::hostname':
     site_path     => 'C:\inetpub\wwwroot\mysite',
     site_id       => '10'
